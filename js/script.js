@@ -5,10 +5,10 @@ import { fieldsNur, fieldsPlanin, fieldsPecherskoeStavropol, fieldsPecherskoeSyz
 document.addEventListener('DOMContentLoaded', function () {
   // ! Определение хозяйства
   const mainPageFlag = document.getElementById('main-page') ? true : false;
+  const companyName = document.getElementById('company-name');
   const fieldsList = getCompanyName();
 
   function getCompanyName() {
-    const companyName = document.getElementById('company-name');
     if (companyName) {
       switch (companyName.textContent) {
         case 'нур':
@@ -107,7 +107,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // ! Получение выноса культуры
     getCropData(inputData);
 
-    // * Получение данных поля
+    // ! Получение данных поля
+    function getFieldData(inputData){
+
+    }
     if (mainPageFlag) {
       const nValue = document.getElementById('n-value').value;
       const pValue = document.getElementById('p-value').value;
