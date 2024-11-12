@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nitrogen: 0,
         phosphorus: 0,
         potassium: 0,
-        sera: 0,
+        sulfur: 0,
         price: document.getElementById('nitrogen-price').value,
       },
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nitrogen: 0,
         phosphorus: 0,
         potassium: 0,
-        sera: 0,
+        sulfur: 0,
         price: document.getElementById('phosphorus-price').value,
       },
 
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nitrogen: 0,
         phosphorus: 0,
         potassium: 0,
-        sera: 0,
+        sulfur: 0,
         price: document.getElementById('potassium-price').value,
       },
     };
@@ -158,7 +158,7 @@ function fertilizerCatch(inputData) {
       inputData.fertilizerN.nitrogen = elem.nitrogen;
       inputData.fertilizerN.phosphorus = elem.phosphorus;
       inputData.fertilizerN.potassium = elem.potassium;
-      inputData.fertilizerN.sera = elem.sera;
+      inputData.fertilizerN.sulfur = elem.sulfur;
     }
   });
   // *Фосфорное удобрение
@@ -167,7 +167,7 @@ function fertilizerCatch(inputData) {
       inputData.fertilizerP.nitrogen = elem.nitrogen;
       inputData.fertilizerP.phosphorus = elem.phosphorus;
       inputData.fertilizerP.potassium = elem.potassium;
-      inputData.fertilizerP.sera = elem.sera;
+      inputData.fertilizerP.sulfur = elem.sulfur;
     }
   });
   // *Калийное удобрение
@@ -176,7 +176,7 @@ function fertilizerCatch(inputData) {
       inputData.fertilizerK.nitrogen = elem.nitrogen;
       inputData.fertilizerK.phosphorus = elem.phosphorus;
       inputData.fertilizerK.potassium = elem.potassium;
-      inputData.fertilizerK.sera = elem.sera;
+      inputData.fertilizerK.sulfur = elem.sulfur;
     }
   });
 }

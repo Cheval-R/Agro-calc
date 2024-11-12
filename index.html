@@ -32,23 +32,23 @@
   <main>
     <div class="container">
       <div class="calculator">
-        <div class="input-column">
+        <div class="input-column" id="input-column">
           <div class="nitrogen-value-block">
             <h2 class="cell-header"> Азот </h2>
             <div class="input-wrapper">
-              <input id="n-value" type="number" min="0">
+              <input id="n-value" type="number" min="0" value="0">
             </div>
           </div>
           <div class="phosphorus-value-block">
             <h2 class="cell-header"> Фосфор </h2>
             <div class="input-wrapper">
-              <input id="p-value" type="number" min="0">
+              <input id="p-value" type="number" min="0" value="0">
             </div>
           </div>
           <div class="potassium-value-block">
             <h2 class="cell-header"> Калий </h2>
             <div class="input-wrapper">
-              <input id="k-value" type="number" min="0">
+              <input id="k-value" type="number" min="0" value="0">
             </div>
           </div>
           <div class="area-block">
@@ -116,13 +116,6 @@
               <select id="nitrogen">
                 <option>Нет</option>
                 <option>Аммиачная селитра</option>
-                <option>Аммофос(52)</option>
-                <option>Аммофос(46)</option>
-                <option>Диаммофоска</option>
-                <option>Азофоска(15)</option>
-                <option>Азофоска(16)</option>
-                <option>NPKS(4)</option>
-                <option>NPKS(8)</option>
                 <option>Сульфонитрат (30:7)</option>
                 <option>Сульфонитрат (26:13)</option>
                 <option>КАС(28)</option>
@@ -154,11 +147,7 @@
               <select id="potassium">
                 <option>Нет</option>
                 <option>Калий хлористый</option>
-                <option>Диаммофоска</option>
-                <option>Азофоска(15)</option>
-                <option>Азофоска(16)</option>
-                <option>NPKS(4)</option>
-                <option>NPKS(8)</option>
+                <option>Калий сернокислый</option>
               </select>
             </div>
           </div>

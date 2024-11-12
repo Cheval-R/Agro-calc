@@ -4,7 +4,7 @@ export let activeSubstance = [
 		nitrogen: 0,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 0
 	},
 	{
@@ -12,15 +12,23 @@ export let activeSubstance = [
 		nitrogen: 0,
 		phosphorus: 0,
 		potassium: 60,
-		sera: 0,
+		sulfur: 0,
 		price: 23
+	},
+	{
+		name: "Калий сернокислый",
+		nitrogen: 0,
+		phosphorus: 0,
+		potassium: 50,
+		sulfur: 18,
+		price: 70
 	},
 	{
 		name: "Аммиачная селитра",
 		nitrogen: 34.4,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 20.655
 	},
 	{
@@ -28,7 +36,7 @@ export let activeSubstance = [
 		nitrogen: 12,
 		phosphorus: 52,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 52
 	},
 	{
@@ -36,7 +44,7 @@ export let activeSubstance = [
 		nitrogen: 10,
 		phosphorus: 46,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 50.898
 	},
 	{
@@ -44,7 +52,7 @@ export let activeSubstance = [
 		nitrogen: 10,
 		phosphorus: 26,
 		potassium: 26,
-		sera: 0,
+		sulfur: 0,
 		price: 44.074
 	},
 	{
@@ -52,7 +60,7 @@ export let activeSubstance = [
 		nitrogen: 15,
 		phosphorus: 15,
 		potassium: 15,
-		sera: 0,
+		sulfur: 0,
 		price: 35.266
 	},
 	{
@@ -60,7 +68,7 @@ export let activeSubstance = [
 		nitrogen: 16,
 		phosphorus: 16,
 		potassium: 16,
-		sera: 0,
+		sulfur: 0,
 		price: 34.394
 	},
 	{
@@ -68,7 +76,7 @@ export let activeSubstance = [
 		nitrogen: 15,
 		phosphorus: 15,
 		potassium: 15,
-		sera: 11,
+		sulfur: 11,
 		price: 32.988
 	},
 	{
@@ -76,7 +84,7 @@ export let activeSubstance = [
 		nitrogen: 8,
 		phosphorus: 20,
 		potassium: 30,
-		sera: 8,
+		sulfur: 8,
 		price: 42.74
 	},
 	{
@@ -84,7 +92,7 @@ export let activeSubstance = [
 		nitrogen: 30,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 7,
+		sulfur: 7,
 		price: 27.05
 	},
 	{
@@ -92,7 +100,7 @@ export let activeSubstance = [
 		nitrogen: 26,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 13,
+		sulfur: 13,
 		price: 19
 	},
 	{
@@ -100,7 +108,7 @@ export let activeSubstance = [
 		nitrogen: 28,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 3,
+		sulfur: 3,
 		price: 21
 	},
 	{
@@ -108,7 +116,7 @@ export let activeSubstance = [
 		nitrogen: 46,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 31.874
 	},
 	{
@@ -116,7 +124,7 @@ export let activeSubstance = [
 		nitrogen: 21,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 24,
+		sulfur: 24,
 		price: 21.2
 	},
 	{
@@ -124,7 +132,7 @@ export let activeSubstance = [
 		nitrogen: 82,
 		phosphorus: 0,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 60
 	},
 	{
@@ -132,7 +140,7 @@ export let activeSubstance = [
 		nitrogen: 0,
 		phosphorus: 22,
 		potassium: 0,
-		sera: 0,
+		sulfur: 0,
 		price: 11.3
 	},
 ];
