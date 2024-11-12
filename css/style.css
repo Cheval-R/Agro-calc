@@ -96,7 +96,10 @@ p {
 }
 
 .name-block {
+  flex-direction: column;
+  display: flex;
   grid-area: name;
+  justify-content: space-between;
 }
 
 .cell-header {
@@ -108,6 +111,7 @@ p {
 
   padding: 2px;
   text-align: center;
+  flex-basis: 100%;
 }
 
 .field-name-active {
@@ -347,7 +351,7 @@ p {
   left: -75px;
   transform: skewX(-45deg);
 }
-.header__logo{
+.header__logo {
 }
 
 .header__logo-link::before {
@@ -412,7 +416,7 @@ p {
   }
 
   .main-page .input-column {
-    grid-template-columns: repeat(6, 24px);
+    grid-template-columns: repeat(6, 21px);
   }
 
   .fertilizer-price h2 {
@@ -437,7 +441,8 @@ p {
   }
 
   .main-page .input-column {
-    grid-template-columns: repeat(6, clamp(15px, 3.4vw, 24px));
+    grid-template-columns: repeat(6, clamp(15px, 2.8vw, 24px));
+    /* grid-template-columns: repeat(6, clamp(15px, 3.4vw, 24px)); */
   }
   .fertilizer-wrapper label {
     gap: 0;
