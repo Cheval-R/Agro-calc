@@ -103,6 +103,7 @@ p {
 }
 
 .cell-header {
+  /* word-break: break-all; */
   font-size: 16px;
   margin: 0;
   background-color: #efefef;
@@ -303,7 +304,7 @@ p {
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  padding: 5px;
+  padding: 4px;
   position: relative;
   overflow: hidden;
   border: 2px solid #fe6637;
@@ -324,7 +325,9 @@ p {
 .companies-wrapper {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 5px;
 }
 
 .region-btn {
@@ -399,6 +402,33 @@ p {
   left: 10px;
 }
 
+.table {
+  /* width: 100%; */
+  margin: 0 auto 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  text-align: center;
+}
+.table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+.table td {
+  border: 1px solid #dddddd;
+  padding: 5px;
+}
+.low {
+  background-color: #ee8138;
+}
+.optimal {
+  background-color: #8dbd6c;
+}
+.high {
+  background-color: #ffc411;
+}
+
 @media (max-width: 1000px) {
   body,
   input,
@@ -416,7 +446,7 @@ p {
   }
 
   .main-page .input-column {
-    grid-template-columns: repeat(6, 21px);
+    grid-template-columns: repeat(6, 31px);
   }
 
   .fertilizer-price h2 {
@@ -441,7 +471,8 @@ p {
   }
 
   .main-page .input-column {
-    grid-template-columns: repeat(6, clamp(15px, 2.8vw, 24px));
+    grid-template-columns: repeat(6, 26px);
+    /* grid-template-columns: repeat(6, clamp(15px, 2.8vw, 24px)); */
     /* grid-template-columns: repeat(6, clamp(15px, 3.4vw, 24px)); */
   }
   .fertilizer-wrapper label {
@@ -560,5 +591,11 @@ p {
   select {
     padding: 3px 0;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+  .table {
+    font-size: 11px;
   }
 }

@@ -31,10 +31,39 @@
   </header>
   <main>
     <div class="container">
+      <table class="table">
+        <thead>
+          <th>Содержание</th>
+          <th>Орг. в-во, %</th>
+          <th>Фосфор</th>
+          <th>Калий (обм.)</th>
+        </thead>
+        <tbody>
+          <tr class="low">
+            <td>Низкое</td>
+            <td>&lt; 2,9</td>
+            <td>&lt; 20</td>
+            <td>&lt; 6</td>
+          </tr>
+          <tr class="optimal">
+            <td>Оптимальное</td>
+            <td>2,9&nbsp;&mdash; 6,2</td>
+            <td>20&nbsp;&mdash; 40</td>
+            <td>6&nbsp;&mdash; 12</td>
+          </tr>
+          <tr class="high">
+            <td>Повышенное</td>
+            <td>&gt; 6,2</td>
+            <td>&gt; 40</td>
+            <td>&gt; 12</td>
+          </tr>
+        </tbody>
+      </table>
+
       <div class="calculator">
         <div class="input-column" id="input-column">
           <div class="nitrogen-value-block">
-            <h2 class="cell-header"> Азот </h2>
+            <h2 class="cell-header"> Орг.в-во </h2>
             <div class="input-wrapper">
               <input id="n-value" type="number" min="0" value="0">
             </div>
