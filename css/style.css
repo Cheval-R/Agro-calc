@@ -409,15 +409,21 @@ p {
   border-collapse: collapse;
   text-align: center;
 }
+.table caption {
+  text-align: center;
+  font-weight: 700;
+}
 .table th {
   font-weight: bold;
   padding: 5px;
   background: #efefef;
   border: 1px solid #dddddd;
+  width: min-content;
 }
 .table td {
   border: 1px solid #dddddd;
-  padding: 5px;
+  padding: 5px 3px;
+  width: min-content;
 }
 .low {
   background-color: #ee8138;
