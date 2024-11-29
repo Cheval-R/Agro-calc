@@ -520,3 +520,54 @@ export let fieldsNur = [
     potassium: 9.8,
   },
 ];
+export let fieldsDuslyk = [
+  {
+    name: '140',
+    area: 140,
+    organic: 4.4,
+    phosphorus: 98.3,
+    potassium: 10.9,
+  },
+  {
+    name: '70',
+    area: 70,
+    organic: 4.5,
+    phosphorus: 112.2,
+    potassium: 11.4,
+  },
+  {
+    name: '150',
+    area: 150,
+    organic: 4.4,
+    phosphorus: 61.8,
+    potassium: 10.6,
+  },
+  {
+    name: '100',
+    area: 100,
+    organic: 4.7,
+    phosphorus: 54.3,
+    potassium: 10.6,
+  },
+  {
+    name: '99',
+    area: 99,
+    organic: 4.3,
+    phosphorus: 57.0,
+    potassium: 10.0,
+  },
+  {
+    name: '84',
+    area: 84,
+    organic: 5.0,
+    phosphorus: 67.0,
+    potassium: 10.7,
+  },
+  {
+    name: '59',
+    area: 38,
+    organic: 4.4,
+    phosphorus: 48.1,
+    potassium: 9.8,
+  },
+];

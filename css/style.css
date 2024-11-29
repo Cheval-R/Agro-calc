@@ -324,10 +324,22 @@ p {
 
 .companies-wrapper {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  justify-content: center;
+  grid-auto-flow: dense; /* Обеспечивает плотное заполнение строк */
   gap: 5px;
+}
+.companies-wrapper .btn {
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .companies-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .companies-wrapper .btn:last-child {
+    grid-column: 1 / -1;
+  } */
 }
 
 .region-btn {

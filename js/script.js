@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function getCompanyName() {
     if (companyName) {
-      switch (companyName.textContent) {
+      switch (companyName.textContent.toLowerCase()) {
         case 'нур':
           return fieldsNur;
         case 'планин':
@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
         case 'печерское ставрополь':
           return fieldsPecherskoeStavropol;
         case 'печерское сызрань':
+          return fieldsPecherskoeSyzran;
+        case 'дуслык':
           return fieldsPecherskoeSyzran;
         default:
           alert("Ошибка выбора хозяйства");

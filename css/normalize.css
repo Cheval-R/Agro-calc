@@ -291,6 +291,10 @@ iframe {
   border: none;
 }
 
+:root {
+  scrollbar-width: thin;
+}
+
 .container {
   padding: 0 10px;
 }
