@@ -1,6 +1,6 @@
 import { removal } from './crops.js';
 import { activeSubstance } from './fertilizer.js';
-import { fieldsNur, fieldsPlanin, fieldsPecherskoeStavropol, fieldsPecherskoeSyzran, fieldsDuslyk } from './fields.js';
+import { fieldsNur, fieldsPlanin, fieldsPecherskoeStavropol, fieldsPecherskoeSyzran, fieldsDuslyk, fieldsAnyak } from './fields.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   // ! Определение хозяйства
@@ -21,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
           return fieldsPecherskoeSyzran;
         case 'дуслык':
           return fieldsDuslyk;
+        case 'аняк':
+          return fieldsAnyak;
         default:
           alert("Ошибка выбора хозяйства");
           return false;

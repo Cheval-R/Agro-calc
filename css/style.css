@@ -337,9 +337,6 @@ p {
   .companies-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .companies-wrapper .btn:last-child {
-    grid-column: 1 / -1;
-  } */
 }
 
 .region-btn {
