@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Effective Temperature Sum</title>
+  <style>@charset "UTF-8";html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}button,input{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button{text-transform:none}[type=submit],button{-moz-appearance:button;appearance:button;-webkit-appearance:button}[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em;border:none}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}:root{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-gutter:stable}body{position:relative;overflow-x:hidden;min-width:320px;min-height:100vh;font-family:Epilogue,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;color:rgba(57,20,0,.6392156863);background-color:#fdf0e9;font-size:16px;line-height:2;font-weight:400;scrollbar-width:thin}html{position:relative;box-sizing:border-box}*,::after,::before{box-sizing:border-box}button{padding:0;border:none;background-color:transparent}fieldset,h1{line-height:1.2;margin:0}.container{box-sizing:content-box;max-width:1170px;margin:0 auto;padding:0 23px}.quote p{position:relative;display:block;color:rgba(57,20,0,.6392156863);grid-area:quote;margin-bottom:12px}.quote cite{color:#391400;grid-area:cite}.quote::before{grid-area:avatar;content:"";display:block;width:48px;height:48px}.weather{text-align:center}.weather__title{margin-bottom:30px}.weather__wrapper{margin:0 auto;background:#fff;padding:20px;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1)}.weather__form{display:grid;gap:10px;grid-template-areas:"client map" "coordinates map" "date map" "base button"}.weather__input{margin-bottom:15px}.map{grid-area:map;text-align:center;border-radius:15px;box-shadow:0 4px 6px rgba(0,0,0,.1)}form{margin-bottom:20px}button,input{padding:10px;margin:5px;border:1px solid #ccc;border-radius:5px}button{background-color:#007bff;color:#fff}.coordinates{grid-area:coordinates;display:flex;justify-content:space-evenly;flex-wrap:wrap}.coordinates__wrapper{display:flex;flex-direction:column}.date{grid-area:date;display:flex;justify-content:space-evenly;flex-wrap:wrap}.date__wrapper{display:flex;flex-direction:column}input{text-align:center}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.map{width:auto;max-width:600px;height:400px}.base-temp{grid-area:base;display:flex;justify-content:center;align-items:center;gap:20px}.base-temp span{text-underline-offset:4px;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}.client-data{grid-area:client;display:grid;grid-template-columns:repeat(auto-fill,225px);justify-content:space-evenly;gap:5px}.client-data__label{display:flex;flex-direction:column}.output{padding:25px 0}.calculate{grid-area:button}.air-datepicker--navigation{grid-area:nav}.air-datepicker--content{box-sizing:content-box;padding:var(--adp-padding);grid-area:body}.air-datepicker--time{grid-area:timepicker}.air-datepicker--buttons{grid-area:buttons}@media (max-width:1200px){.client-data{grid-template-columns:repeat(2,225px);grid-template-rows:repeat(2,1fr)}}@media (max-width:900px){.weather__form{grid-template-areas:"client" "coordinates" "date" "base" "map" "button"}}@media (max-width:560px){.client-data{grid-template-columns:repeat(auto-fill,225px);grid-template-rows:auto}}@media (max-width:450px){.weather__title{font-size:26px}.map{height:250px}}</style>
+  <link rel="stylesheet" href="./css/style.min.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <main>
+    <section class="weather">
+      <div class="container">
+        <div class="weather__wrapper">
+          <h1 class="weather__title">Прогнозирование сроков уборки кукурузы на силос</h1>
+          <div class="weather__input">
+            <form class="weather__form" id="location-form" novalidate>
+              <fieldset class="client-data">
+                <label class="client-data__label client-data__farm" for="farm-name">
+                  <span>Название агрофирмы</span>
+                  <input name="farm-name" id="farm-name" type="text" required>
+                </label>
+                <label class="client-data__label client-data__name" for="client-name">
+                  <span>Ваше имя</span>
+                  <input name="client-name" id="client-name" type="text" required>
+                </label>
+                <label class="client-data__label client-data__phone" for="phone">
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" id="phone" pattern="^\+7\s?\d{3}\s?\d{3}\s?\d{2}\s?\d{2}$" placeholder="+7 999 999 99 99" required>
+                </label>
+                <label class="client-data__label" for="client-hybrid">
+                  <span>Гибрид</span>
+                  <input name="client-hybrid" id="client-hybrid" type="text" required>
+                </label>
+              </fieldset>
+              <fieldset class="coordinates">
+                <legend>Расположение полей</legend>
+                <label class="coordinates__wrapper" for="latitude">
+                  <span>Широта:</span>
+                  <input type="number" id="latitude" name="latitude" value="55.786949" placeholder="55.786949" step="any" min="-90.000000" max="90.000000" maxlength="10" required>
+                </label>
+                <label class="coordinates__wrapper" for="longitude">
+                  <span>Долгота:</span>
+                  <input type="number" id="longitude" name="longitude" value="49.121358" placeholder="49.121358" step="any" min="-180.000000" max="180.000000" maxlength="11" required>
+                </label>
+              </fieldset>
+              <fieldset class="date">
+                <label class="date__wrapper" for="start-date">
+                  <span>Дата сева:</span>
+                  <input class="datepicker" id="start-date" name="start-date" required placeholder="дд.мм.гггг" pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$" autocomplete="off">
+                </label>
+                <label class="date__wrapper" for="end-date">
+                  <span>Конечная дата:</span>
+                  <input class="datepicker" id="end-date" name="end-date" required placeholder="дд.мм.гггг" pattern="^(0[1-9]|[12][0-9]|3[01])\.(0[1-9]|1[0-2])\.(19|20)\d{2}$" autocomplete="off">
+                </label>
+              </fieldset>
+              <label class="base-temp" for="base-temp" title="Температура при которой начинается вегетация гибрида">
+                <span>Базовая температура (°C):</span>
+                <input type="number" id="base-temp" name="base-temp" value="10" max="20" min="0" placeholder="5" required>
+              </label>
+              <div class="map" id="map" height="300" width="600"></div>
+              <button class="calculate" type="submit">Рассчитать</button>
+            </form>
+          </div>
+          <div class="output" id="output">
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://api-maps.yandex.ru/v3/?apikey=62e3fbe2-5fc5-4b7d-b9f0-86acc43edb26&lang=ru_RU"></script>
+  <script type="module" src="./js/script.min.js"></script>
+
+<noscript><link rel="stylesheet" href="./css/style.min.css"></noscript>
+
+</body>
+
+</html>
